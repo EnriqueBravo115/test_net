@@ -1,6 +1,22 @@
 @test_net_HostAddress = http://localhost:5109
 
+### Get weatherforecast
 GET {{test_net_HostAddress}}/weatherforecast/
 Accept: application/json
 
-###
+### Get all products
+GET {{test_net_HostAddress}}/api/product
+Accept: application/json
+
+### Get product by id
+GET {{test_net_HostAddress}}/api/product/1
+Accept: application/json
+
+### Create product
+POST {{test_net_HostAddress}}/api/product
+Content-Type: application/json
+
+{
+  "name": "Monitor",
+  "price": 299.99
+}
